@@ -22,15 +22,10 @@ public class Pedido {
     private String EnderecoCliente;
     private String nomeCliente;
     private String TelefoneCliente;
-    private String Status;
-    private Date DataHora;
+   // private Date DataHora;
+    private String DataHora;
     
-    private Entrega entrega;
-    
-    private RotaRealizada RotaReal;
-    
-    private Rota Rota;
-    
+    private Status Status; 
     private Funcionario Funcionairo;
 
     public int getIdPedido() {
@@ -75,39 +70,11 @@ public class Pedido {
         this.TelefoneCliente = TelefoneCliente;
     }
 
-    public String getStatus() {
-        return Status;
-    }
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    public Date getDateTime() {
+    public String getDateTime() {
         return DataHora;
     }
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(String dateTime) {
         this.DataHora = dateTime;
-    }
-
-    public Entrega getEntrega() {
-        return entrega;
-    }
-    public void setEntrega(Entrega entrega) {
-        this.entrega = entrega;
-    }
-
-    public RotaRealizada getRotaReal() {
-        return RotaReal;
-    }
-    public void setRotaReal(RotaRealizada RotaReal) {
-        this.RotaReal = RotaReal;
-    }
-
-    public Rota getRota() {
-        return Rota;
-    }
-    public void setRota(Rota Rota) {
-        this.Rota = Rota;
     }
 
     public Funcionario getFuncionairo() {
@@ -115,6 +82,14 @@ public class Pedido {
     }
     public void setFuncionairo(Funcionario Funcionairo) {
         this.Funcionairo = Funcionairo;
+    }
+
+    public Status getStatus() {
+        return Status;
+    }
+
+    public void setStatus(Status Status) {
+        this.Status = Status;
     }
     
 }

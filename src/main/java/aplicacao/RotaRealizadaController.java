@@ -2,9 +2,7 @@ package aplicacao;
 /*
 * @author leandroDavid
 */
-import entidade.Funcionario;
-import entidade.Cargo;
-import entidade.Rota;
+import entidade.RotaRealizada;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RotaController {
+public class RotaRealizadaController {
     
     //    @CrossOrigin
 //    @RequestMapping(method=RequestMethod.GET, value="/cargo")
@@ -26,21 +24,21 @@ public class RotaController {
 //        return dao.consultar(filtro);
 //    }
  
-      @RequestMapping("/rota")
-     public List<Rota> listarRota(){
-        List resultado = new ArrayList<Rota>();
+      @RequestMapping("/rotaRealizada")
+     public List<RotaRealizada> listarRota(){
+        List resultado = new ArrayList<RotaRealizada>();
         
         Date date = new Date();
         DateFormat formato = new SimpleDateFormat("hh,mm");
         String formattedDate = formato.format(date);
 
-        Rota r1 = new Rota();
-        r1.setIdRota(1);
-        r1.setEnderecoEntrega("rua destino");
-        r1.setLocalizacaoEntregador("rua oreigem");
-        r1.setTempo(30);
+        RotaRealizada rr1 = new RotaRealizada();
+        rr1.setIdRotaReal(1);
+        rr1.setEnderecoEntrega("rua destino");
+        rr1.setLocalizacaoEntregador("rua oreigem");
+        rr1.setTempo(25);
 
-        resultado.add(r1);
+        resultado.add(rr1);
                
         return resultado;
     }

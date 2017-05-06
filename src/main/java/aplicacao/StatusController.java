@@ -1,10 +1,8 @@
 package aplicacao;
-/*
-* @author leandroDavid
-*/
-import entidade.Funcionario;
-import entidade.Cargo;
-import entidade.Rota;
+/**
+ * @author leandroDavid
+ */
+import entidade.Status;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,32 +15,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RotaController {
-    
-    //    @CrossOrigin
+public class StatusController {
+     //    @CrossOrigin
 //    @RequestMapping(method=RequestMethod.GET, value="/cargo")
 //    public List<Cargo> listarPiadas(@RequestParam(value = "palavra", defaultValue="") String filtro){
 //        CargoDAO dao = new CargoDAO();
 //        return dao.consultar(filtro);
 //    }
  
-      @RequestMapping("/rota")
-     public List<Rota> listarRota(){
-        List resultado = new ArrayList<Rota>();
+      @RequestMapping("/status")
+     public List<Status> listarRota(){
+        List resultado = new ArrayList<Status>();
         
         Date date = new Date();
-        DateFormat formato = new SimpleDateFormat("hh,mm");
+        DateFormat formato = new SimpleDateFormat("DD,MM,YYYY - hh,mm");
         String formattedDate = formato.format(date);
 
-        Rota r1 = new Rota();
-        r1.setIdRota(1);
-        r1.setEnderecoEntrega("rua destino");
-        r1.setLocalizacaoEntregador("rua oreigem");
-        r1.setTempo(30);
-
-        resultado.add(r1);
+        Status status = new Status();
+        status.setIdStatus(1);
+        status.setStatus("Preparando");
+        
+        resultado.add(status);
                
         return resultado;
-    }
-}
-  
+}}
