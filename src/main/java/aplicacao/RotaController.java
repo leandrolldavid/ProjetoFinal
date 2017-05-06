@@ -1,8 +1,14 @@
-
 package aplicacao;
-
+/*
+* @author leandroDavid
+*/
+import entidade.Funcionario;
 import entidade.Cargo;
+import entidade.Rota;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,32 +17,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CargoController {
+public class RotaController {
     
-//    @CrossOrigin
+    //    @CrossOrigin
 //    @RequestMapping(method=RequestMethod.GET, value="/cargo")
 //    public List<Cargo> listarPiadas(@RequestParam(value = "palavra", defaultValue="") String filtro){
 //        CargoDAO dao = new CargoDAO();
 //        return dao.consultar(filtro);
 //    }
-    
-    @RequestMapping("/cargo")
-     public List<Cargo> listarCargo(){
-        List resultado = new ArrayList<Cargo>();
+ 
+ 
+     public List<Rota> listarRota(){
+        List resultado = new ArrayList<Rota>();
         
-        Cargo c1 = new Cargo();
-        c1.setPerfil("Teste 1");
-        c1.setIdCargo(1);
-        
-        resultado.add(c1);
-        
-        Cargo c2 = new Cargo();
-        c2.setPerfil("Teste 2");
-        c2.setIdCargo(2);
-        resultado.add(c2);
-        
+        Date date = new Date();
+        DateFormat formato = new SimpleDateFormat("hh,mm");
+        String formattedDate = formato.format(date);
+
+        Rota r1 = new Rota();
+        r1.setIdRota(1);
+        r1.setEnderecoEntrega("rua destino");
+        r1.setLocalizacaoEntregador("rua oreigem");
+        r1.setTempo(30);
+
+        resultado.add(r1);
+               
         return resultado;
-        
     }
-    
 }
+  
