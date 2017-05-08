@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import persistencia.CargoDAO;
 
 @RestController
 public class CargoController {
+    
+     private CargoDAO CgDAO;
     
 //    @CrossOrigin
 //    @RequestMapping(method=RequestMethod.GET, value="/cargo")
@@ -19,6 +22,10 @@ public class CargoController {
 //        CargoDAO dao = new CargoDAO();
 //        return dao.consultar(filtro);
 //    }
+      @RequestMapping(value = "/cargo/lista", method = RequestMethod.GET)
+    public List<Cargo> listCargo() throws Exception {
+        return CgDAO.listCargo();//verificar se esta certo
+    }
     
     @RequestMapping("/cargo")
      public List<Cargo> listarCargo(){
@@ -38,5 +45,4 @@ public class CargoController {
         return resultado;
         
     }
-    
 }

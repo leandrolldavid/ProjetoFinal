@@ -10,12 +10,12 @@ import javax.persistence.Table;
  * @author Leandro David
  */
 
-//@Entity 
-//@Table(name = "tbEntrega")
+@Entity 
+@Table(name = "cargo")
 public class Cargo {
     
- // @Id
- // @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id
+ @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer IdCargo;
     
    
