@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-//@Entity 
-//@Table(name = "tbFuncioanrio")
+@Entity 
+@Table(name = "funcionario")
 public class Funcionario { 
     
-    //@Id 
+    @Id 
     //@GeneratedValue(strategy = GenerationType.AUTO)
     private Integer IdFuncionario;
     
@@ -25,7 +25,7 @@ public class Funcionario {
     private String login;
     private String Senha;
     
-    @ManyToOne
+    //@ManyToOne
     private Cargo cargo;
 
     public Integer getIdFuncionario() {

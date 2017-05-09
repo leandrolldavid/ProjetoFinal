@@ -18,7 +18,8 @@ public class CargoController {
     
      private CargoDAO CgDAO;
       @CrossOrigin
-    @RequestMapping(method = RequestMethod.POST, value="/salvar/cargo")
+    @RequestMapping(method = RequestMethod.POST, 
+                    value="/salvar/cargo")
     public Cargo salvarPiada(){
         //(@RequestBody Cargo p)
         Cargo c1 = new Cargo();

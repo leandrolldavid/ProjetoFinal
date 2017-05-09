@@ -4,6 +4,7 @@ package aplicacao;
  * @author leandro David
  */
 import entidade.Funcionario;
+import persistencia.FuncionarioDAO;
 import entidade.Cargo;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FuncionarioController {
      
-//    @CrossOrigin
-//    @RequestMapping(method=RequestMethod.GET, value="/cargo")
-//    public List<Cargo> listarPiadas(@RequestParam(value = "palavra", defaultValue="") String filtro){
-//        CargoDAO dao = new CargoDAO();
-//        return dao.consultar(filtro);
-//    }
-    
+
+  @RequestMapping(value = "/funcionario/listar", method = RequestMethod.GET)
+    public List<Funcionario> listCargo() throws Exception {
+        return new FuncionarioDAO().listFuncionario();//verificar se esta certo
+    }    
     @RequestMapping("/funcionario")
      public List<Funcionario> listarFuncionario(){
         List resultado = new ArrayList<Funcionario>();

@@ -9,5 +9,11 @@
     <property name="hibernate.connection.password">app</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="entidade.Cargo"/>
+    <mapping class="entidade.Entrega"/>
+    <mapping class="entidade.Funcionario"/>
+    <mapping class="entidade.Pedido"/>
+    <mapping class="entidade.Rota"/>
+    <mapping class="entidade.RotaRealizada"/>
+    <mapping class="entidade.Status"/>
   </session-factory>
 </hibernate-configuration>

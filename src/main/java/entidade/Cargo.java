@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Cargo {
     
   @Id
- @GeneratedValue(strategy = GenerationType.AUTO)
+// @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer IdCargo;
     
    

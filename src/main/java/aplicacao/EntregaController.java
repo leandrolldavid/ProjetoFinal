@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import persistencia.EntregaDAO;
 
 @RestController
 public class EntregaController {
      
-//    @CrossOrigin
-//    @RequestMapping(method=RequestMethod.GET, value="/cargo")
-//    public List<Cargo> listarPiadas(@RequestParam(value = "palavra", defaultValue="") String filtro){
-//        CargoDAO dao = new CargoDAO();
-//        return dao.consultar(filtro);
-//    }
+
+     @RequestMapping(value = "/entrega/listar", method = RequestMethod.GET)
+    public List<Entrega> listCargo() throws Exception {
+        return new EntregaDAO().listEntrega();//verificar se esta certo
+    }
     
     @RequestMapping("/entrega")
      public List<Entrega> listarEntrega(){

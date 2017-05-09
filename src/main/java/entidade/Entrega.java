@@ -9,12 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-//@Entity 
-//@Table(name = "tbEntrega")
+@Entity 
+@Table(name = "entrega")
 public class Entrega {
      
-  // @Id
-  // @GeneratedValue(strategy = GenerationType.AUTO)
+   @Id
+   //@GeneratedValue(strategy = GenerationType.AUTO)
     private Integer IdEntrega;
     private Integer NumMax;
     //@OneToMany
