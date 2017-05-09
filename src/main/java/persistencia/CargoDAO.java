@@ -28,6 +28,10 @@ public class CargoDAO {
               session.close();
           }return Cargo;
         }
+      
+       public Cargo buscarPeloID(int id){
+        return (Cargo) HibernateUtil.getSessionFactory().openSession().get(Cargo.class, id);
+    }
 
     public Cargo salvar(Cargo c){
         Transaction tx = null;
