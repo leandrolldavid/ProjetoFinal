@@ -18,7 +18,7 @@ import persistencia.EntregaDAO;
 
 @RestController
 public class EntregaController {
-     
+      
 
      @RequestMapping(value = "/entrega/listar", method = RequestMethod.GET)
     public List<Entrega> listCargo() throws Exception {
@@ -35,7 +35,7 @@ public class EntregaController {
         f1.setIdFuncionario(1);
         
         Entrega e1 = new Entrega();
-        e1.setFuncionario(f1);
+        //e1.setFuncionario(f1);
         e1.setIdEntrega(1);
         e1.setNumMax(3);
         
@@ -45,7 +45,7 @@ public class EntregaController {
         f2.setIdFuncionario(2);
         
         Entrega e2 = new Entrega();
-        e2.setFuncionario(f2);
+       // e2.setFuncionario(f2);
         e2.setIdEntrega(2);
         e2.setNumMax(3);
         

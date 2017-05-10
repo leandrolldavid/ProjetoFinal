@@ -18,7 +18,7 @@ public class Entrega {
     private Integer IdEntrega;
     private Integer NumMax;
     //@OneToMany
-    private Funcionario Funcionario;
+    //private Funcionario Funcionario;
 
     public Integer getIdEntrega() {
         return IdEntrega;
@@ -34,13 +34,13 @@ public class Entrega {
         this.NumMax = NumMax;
     }
 
-    public Funcionario getFuncionario() {
+   /* public Funcionario getFuncionario() {
         return Funcionario;
     }
     public void setFuncionario(Funcionario Funcionario) {
         this.Funcionario = Funcionario;
     }
-    
+    */
     
     
 }

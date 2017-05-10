@@ -1,23 +1,21 @@
 package entidade;
-
+/** 
+ * @author Leandro David
+ */
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-/** 
- * @author Leandro David
- */
 
 @Entity 
 @Table(name = "cargo")
 public class Cargo {
     
-  @Id
+   @Id
 // @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer IdCargo;
-    
    
     private String perfil;
 
@@ -32,7 +30,6 @@ public class Cargo {
     public Integer getIdCargo() {
         return IdCargo;
     }
-
     public void setIdCargo(Integer IdCargo) {
         this.IdCargo = IdCargo;
     }

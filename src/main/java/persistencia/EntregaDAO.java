@@ -61,7 +61,7 @@ public class EntregaDAO {
                 Session sessao = HibernateUtil.getSessionFactory().openSession();
                 Entrega antiga = (Entrega) sessao.get(Entrega.class, id);
 
-                antiga.setFuncionario(novo.getFuncionario());
+               // antiga.setFuncionario(novo.getFuncionario());
                 antiga.setNumMax(novo.getNumMax());
 
                 sessao.save(antiga);

@@ -36,7 +36,7 @@ public class CargoController {
 //        CargoDAO dao = new CargoDAO();
 //        return dao.consultar(filtro);
 //    }
-      @RequestMapping(value = "/cargo/listar", method = RequestMethod.GET)
+        @RequestMapping(value = "/cargo/listar", method = RequestMethod.GET)
     public List<Cargo> listCargo() throws Exception {
         return new CargoDAO().listCargo();//verificar se esta certo
     }
